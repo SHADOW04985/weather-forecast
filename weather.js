@@ -8,7 +8,6 @@ document.querySelector(".search-box").addEventListener("input", async (userinput
     try {
       const response = await fetch(link)
       const data = await response.json()
-      console.log(data)
       document.querySelector(".city").innerHTML = `${data.name} , ${data.sys.country}`
       document.querySelector(".date").innerHTML = `${days[today.getDay()]} ${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}`
       document.querySelector(".temp").innerHTML = `${data.main.temp}°c`
